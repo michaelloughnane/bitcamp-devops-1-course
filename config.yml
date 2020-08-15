@@ -1,0 +1,16 @@
+title: BitCamp-DevOps-1
+description: 'An Introduction to GitHub Actions, and a simple "Hello World" implementation.'
+template:
+  repo: bitcamp-devops-1-template
+  name: bitcamp-devops-1
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
